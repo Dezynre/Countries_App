@@ -1,0 +1,89 @@
+
+.hero {
+    width: 100%;
+    padding: 1em 2em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form {
+    width: 30%;
+}
+
+.form button {
+    border: 1px solid hsl(0, 0%, 50%);
+    float: left;
+    padding: .4em;
+    font-size: 16px;
+    width: 15%;
+    border-left: none;
+    cursor: pointer;
+}
+.form input {
+    border: 1px solid hsl(0, 0%, 50%);
+    float: left;
+    padding: .4em;
+    font-size: 16px;
+    width: 85%;
+}
+
+.form::after {
+    content: "";
+    clear: both;
+    display: table
+}
+
+.filter_by_region {
+    position: relative;
+}
+
+.filter_by_region button{
+    padding: .4em 1.5em;
+    border: 1px solid hsl(0, 0%, 50%);
+    font-size: 16px;
+    text-align: left;
+}
+
+.filter_by_region button:hover {
+    cursor: pointer;
+}
+
+.filter_by_region div {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    top: 110%;
+    border: 1px solid hsl(0, 0%, 50%);
+    animation-name: animate_dropdown;
+    animation-duration: 300ms;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+.filter_by_region div span {
+    display: inline-block;
+    padding: .4em;
+    transform: translateX(0px);
+    transition: all 200ms ease-in-out;
+}
+
+.filter_by_region div span:hover {
+    cursor: pointer;
+    opacity: .5;
+    transform: translateX(5px);
+}
+
+@keyframes animate_dropdown {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

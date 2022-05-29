@@ -1,0 +1,49 @@
+
+
+.singleCountry {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    padding: 1em 2em;
+    gap: 10px;
+}
+
+.back_button_wrapper {
+    grid-column: 1/13;
+}
+
+.back_button_wrapper button {
+    padding: .5em 1em;
+    font-weight: 500;
+    border: 1px solid hsl(0, 0, 50%);
+}
+
+.flag {
+    display: block;
+    grid-column: 1/5;
+    grid-row: 2/6;
+}
+
+img {
+    height: auto;
+    width: 100%;
+}
+
+.countryName {
+    grid-column: 5/10;
+    grid-row: 2/3;
+}
+
+.countryInfoPrimary {
+    grid-column: 5/7;
+    grid-row: 3/5;
+}
+
+.countryInfoSecondary {
+    grid-column: 8/10;
+    grid-row: 3/5;
+}
+
+.countryInfoBorder {
+    grid-column: 5/10;
+    grid-row: 5/6;
+}
